@@ -1,12 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 let config = {
 	entry: './src/index.jsx',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js'
+		filename: 'bundle.js',
+		publicPath: "/"
 	},
 	module: {
 		rules: [
@@ -29,9 +29,12 @@ let config = {
 			}
 		]
 	},
+	devServer: {
+		historyApiFallback: true,
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/index.html'
+			template: 'src/index.html'
 		})
 	]
 }
