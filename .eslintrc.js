@@ -24,6 +24,6 @@ module.exports = {
 		"quotes": ["error", "single"],
 		"quote-props": ["error", "always"],
 		"jsx-quotes": ["error", "prefer-double"],
-		"no-console": "off"
+		"no-console": "error"
 	}
 };
