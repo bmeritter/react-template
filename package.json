@@ -8,10 +8,11 @@
   "scripts": {
     "start": "webpack serve --mode development --open --hot",
     "build": "webpack --mode production",
-    "lint": "eslint src --ext .jsx",
+    "lint": "eslint src --ext .jsx,.js",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
