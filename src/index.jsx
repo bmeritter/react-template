@@ -5,10 +5,10 @@ import {
 	Switch,
 	Route,
 	Link,
-} from "react-router-dom";
+} from 'react-router-dom';
 import Home from './components/home/Home.jsx';
-import About from "./components/about/About.jsx";
-import NotFound from "./components/not-found/NotFound.jsx";
+import About from './components/about/About.jsx';
+import NotFound from './components/not-found/NotFound.jsx';
 
 const Routes = () => (
 	<Router>
@@ -35,7 +35,7 @@ const Routes = () => (
 			</Switch>
 		</div>
 	</Router>
-)
+);
 
 ReactDOM.render(
 	<Routes/>,

@@ -1,11 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 let config = {
-	entry: './src/index.jsx',
+	entry: "./src/index.jsx",
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		path: path.resolve(__dirname, "dist"),
+		filename: "bundle.js",
 		publicPath: "/"
 	},
 	module: {
@@ -13,12 +13,12 @@ let config = {
 			{
 				test: /\.jsx$/,
 				exclude: /node_module/,
-				use: 'babel-loader'
+				use: "babel-loader"
 			},
 			{
 				test: /\.(le|c)ss$/,
 				use: [
-					{ loader: 'style-loader' },
+					{ loader: "style-loader" },
 					{ loader: "css-loader" },
 					{ loader: "less-loader" },
 					{
@@ -34,9 +34,9 @@ let config = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'src/index.html'
+			template: "src/index.html"
 		})
 	]
-}
+};
 
 module.exports = config;
