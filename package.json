@@ -9,14 +9,18 @@
     "start": "webpack serve --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "eslint src --ext .jsx,.js",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-test-renderer": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
