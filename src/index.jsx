@@ -6,9 +6,9 @@ import {
 	Route,
 	Link,
 } from 'react-router-dom';
-import Home from './components/home/Home.jsx';
-import About from './components/about/About.jsx';
-import NotFound from './components/not-found/NotFound.jsx';
+import Home from './pages/home/Home.jsx';
+import About from './pages/about/About.jsx';
+import NotFound from './pages/not-found/NotFound.jsx';
 
 const Routes = () => (
 	<Router>

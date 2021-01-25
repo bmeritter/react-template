@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import About from "../src/components/about/About";
+import About from "../src/pages/about/About";
 
 describe('About component', () => {
 	it('snapshot', () => {
