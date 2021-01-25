@@ -7,6 +7,7 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:react/recommended"
 	],
+	"parser": "babel-eslint",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
@@ -21,9 +22,9 @@ module.exports = {
 	"ignorePatterns": [ "webpack.config.js", "postcss.config.js", ".eslintrc.js" ],
 	"rules": {
 		"semi": [ "error", "always" ],
-		"quotes": ["error", "single"],
-		"quote-props": ["error", "always"],
-		"jsx-quotes": ["error", "prefer-double"],
+		"quotes": [ "error", "single" ],
+		"quote-props": [ "error", "always" ],
+		"jsx-quotes": [ "error", "prefer-double" ],
 		"no-console": "error"
 	}
 };
