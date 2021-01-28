@@ -1,7 +1,8 @@
 module.exports = {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"jest": true
 	},
 	"extends": [
 		"eslint:recommended",
@@ -18,7 +19,7 @@ module.exports = {
 		"babel",
 		"react"
 	],
-	"ignorePatterns": [ "webpack.config.js", "postcss.config.js", ".eslintrc.js" ],
+	"ignorePatterns": [ "webpack.config.js", "postcss.config.js", ".eslintrc.js", "jest.config.js" ],
 	"rules": {
 		"semi": [ "error", "always" ],
 		"quotes": ["error", "single"],

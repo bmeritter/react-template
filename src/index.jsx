@@ -1,43 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import Home from './pages/home/Home.jsx';
-import About from './pages/about/About.jsx';
 import NotFound from './pages/not-found/NotFound.jsx';
 
 const Routes = () => (
 	<Router>
-		<div>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/about">About</Link>
-					</li>
-				</ul>
-			</nav>
-
-			<Switch>
-				<Route exact path="/" component={ Home }/>
-				<Route path="/about" component={ About }/>
-
-				<Route path="*">
-					<NotFound/>
-				</Route>
-
-			</Switch>
-		</div>
+		<Switch>
+			<Route exact path="/" component={ Home } />
+			<Route path="*">
+				<NotFound />
+			</Route>
+		</Switch>
 	</Router>
 );
 
 ReactDOM.render(
-	<Routes/>,
+	<Routes />,
 	document.getElementById('root')
 );

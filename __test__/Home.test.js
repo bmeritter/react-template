@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import About from "../src/pages/about/About";
+import Home from '../src/pages/home/Home';
 
 describe('About component', () => {
 	it('snapshot', () => {
-		const comp = renderer.create( <About />)
+		const comp = renderer.create( <Home />);
 		expect(comp).toMatchSnapshot();
 	});
-})
+});

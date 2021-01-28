@@ -2,6 +2,6 @@
 
 exports[`About component snapshot 1`] = `
 <div>
-  about
+  welcome home
 </div>
 `;
