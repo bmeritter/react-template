@@ -1,19 +1,21 @@
+'use strict';
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 let config = {
-	entry: "./src/index.jsx",
+	entry: "./src/index.tsx",
+	devtool: 'inline-source-map',
 	output: {
-		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js",
+		path: path.resolve(__dirname, "dist"),
 		publicPath: "/"
 	},
 	module: {
 		rules: [
 			{
-				test: /\.jsx$/,
-				exclude: /node_module/,
-				use: "babel-loader"
+				test: /\.tsx?$/,
+				exclude: /node_modules/,
+				use: 'ts-loader',
 			},
 			{
 				test: /\.(le|c)ss$/,
@@ -28,6 +30,9 @@ let config = {
 				]
 			}
 		]
+	},
+	resolve: {
+		extensions: [ '.ts', '.tsx', '.js' ],
 	},
 	devServer: {
 		historyApiFallback: true,

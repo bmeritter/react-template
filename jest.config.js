@@ -1,29 +1,33 @@
 module.exports = {
-	"moduleFileExtensions": [
-		"js",
-		"jsx"
-	],
-	"transformIgnorePatterns": [
-		"/node_modules/"
-	],
-	"transform": {
-		'.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
-			'jest-transform-stub',
-		'^.+\\.(js|jsx)?$': 'babel-jest'
+	preset: 'ts-jest',
+	testEnvironment: 'node',
+	transform: {
+		"^.+\\.tsx?$": "ts-jest"
 	},
-	"moduleNameMapper": {
+	transformIgnorePatterns: [
+		"node_modules"
+	],
+	moduleFileExtensions: [
+		"ts",
+		"tsx",
+		"js"
+	],
+	setupFiles: ['./setupTests.ts'],
+	moduleNameMapper: {
 		'^@/(.*)$': '<rootDir>/src/$1'
 	},
-	"collectCoverage": true,
-	"collectCoverageFrom": [
-		"src/**/*.{js,jsx}"
+	snapshotSerializers: ["enzyme-to-json/serializer"],
+	collectCoverage: true,
+	collectCoverageFrom: [
+		'src/**/*.{js,ts,tsx}'
 	],
-	"coverageThreshold": {
-		"global": {
-			"branches": 80,
-			"functions": 10,
-			"lines": 7,
-			"statements": -12
+	coverageThreshold: {
+		global: {
+			branches: 80,
+			functions: 10,
+			lines: 7,
+			statements: 0
 		}
 	}
-}
+
+};
