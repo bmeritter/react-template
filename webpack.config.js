@@ -10,6 +10,7 @@ let config = {
 		path: path.resolve(__dirname, "dist"),
 		publicPath: "/"
 	},
+	performance: { hints: false},
 	module: {
 		rules: [
 			{
