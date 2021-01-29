@@ -19,15 +19,16 @@ let config = {
 				use: 'ts-loader',
 			},
 			{
-				test: /\.(le|c)ss$/,
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: ["babel-loader"]
+			},
+			{
+				test: /\.(le|c|sc)ss$/,
 				use: [
 					{ loader: "style-loader" },
 					{ loader: "css-loader" },
-					{ loader: "less-loader" },
-					{
-						loader: "postcss-loader",
-						options: { sourceMap: true }
-					},
+					{ loader: "sass-loader" }
 				]
 			}
 		]
