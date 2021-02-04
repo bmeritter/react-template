@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home component renderer 1`] = `
-<div>
-  welcome home
-</div>
+<styled.div>
+  <styled.text>
+    welcome home
+  </styled.text>
+</styled.div>
 `;
