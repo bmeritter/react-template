@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from 'styled-components';
+import styled from 'styled-components';
 
-const StyledDiv = styles.div`
+const StyledDiv = styled.div`
   background-color: #7f7f7f;
+  text-align: center;
 `;
 
-const StyledText = styles.text`
-  color: green; 
+const StyledText = styled.p`
+  color: black; 
 `;
 const Home = () => {
   return (

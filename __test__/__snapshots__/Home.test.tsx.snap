@@ -2,8 +2,8 @@
 
 exports[`Home component renderer 1`] = `
 <styled.div>
-  <styled.text>
+  <styled.p>
     welcome home
-  </styled.text>
+  </styled.p>
 </styled.div>
 `;
