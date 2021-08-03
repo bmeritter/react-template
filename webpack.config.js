@@ -1,11 +1,10 @@
 'use strict';
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 let config = {
 	entry: "./src/index.tsx",
-	devtool: 'inline-source-map',
+	devtool: process.env.NODE_ENV === "production" ? "hidden-source-map" : "eval-cheap-source-map",
 	output: {
 		filename: "bundle.js",
 		path: path.resolve(__dirname, "dist"),
@@ -25,27 +24,17 @@ let config = {
 				exclude: /node_modules/,
 				use: [ "babel-loader" ]
 			},
-			{
-				test: /\.(le|c|sc)ss$/,
-				use: [
-					{ loader: "style-loader" },
-					{ loader: "css-loader" },
-					{ loader: "sass-loader" }
-				]
-			}
 		]
 	},
 	resolve: {
-		extensions: [ '.ts', '.tsx', '.js' ],
+		extensions: [ '.tsx', '.ts', '.js' ],
+		mainFields: ['jsnext:main', 'browser', 'main']
 	},
 	devServer: {
 		historyApiFallback: true,
 	},
 	optimization: {
-		minimize: true,
-		minimizer: [new CssMinimizerPlugin({
-			test: /\.scss(\?.*)?$/i,
-		})]
+		minimize: true
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
