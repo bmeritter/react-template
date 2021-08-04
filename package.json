@@ -2,6 +2,10 @@
   "name": "react-template",
   "version": "1.0.0",
   "license": "ISC",
+  "description": "this is a template for react project",
+  "repository": {
+    "type": "github"
+  },
   "scripts": {
     "start": "NODE_ENV=development webpack serve --hot",
     "build": "NODE_ENV=development webpack",
@@ -36,7 +40,6 @@
     "@types/webpack": "^4.41.30",
     "@types/webpack-dev-server": "^3.11.5",
     "@typescript-eslint/parser": "^4.29.0",
-    "autoprefixer": "^10.3.1",
     "babel-loader": "^8.2.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
